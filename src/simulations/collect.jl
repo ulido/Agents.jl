@@ -403,7 +403,7 @@ function init_model_dataframe(model::ABM, properties::Vector)
                 current_type[]
             end
     end
-    DataFrame(types, headers)
+    DataFrame(types, headers, makeunique=true)
 end
 
 init_model_dataframe(model::ABM, properties::Nothing) = DataFrame()
